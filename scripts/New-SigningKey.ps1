@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Creates the release signing key that signs both the Full and the Lite app. Run it once, ever.
+    Creates the release signing key that signs the app. Run it once, ever.
 
 .DESCRIPTION
     Writes four files to release-signing\ (which Git ignores):
@@ -69,7 +69,7 @@ if ($LASTEXITCODE -ne 0) {
 
 $props = @'
 <Project>
-  <!-- Written by scripts\New-SigningKey.ps1. Signs release builds of both Full and Lite. -->
+  <!-- Written by scripts\New-SigningKey.ps1. Signs release builds. -->
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <AndroidKeyStore>true</AndroidKeyStore>
     <AndroidSigningKeyStore>$(MSBuildThisFileDirectory)CustomSoundboard.keystore</AndroidSigningKeyStore>

@@ -18,20 +18,7 @@ This is an accessibility-focused communication tool. Changes should support inde
 
 The app should allow a parent, carer, family member, or other supporting user to customise soundboard tiles in an edit mode. They should be able to provide the text for a new tile and choose how its audio is created.
 
-The product is planned in two editions: **Lite** and **Full**.
-
-### Lite edition
-
-The Lite edition is intended for older, lower-memory, or less powerful Android devices. It should remain lightweight and accessible to people who cannot afford newer hardware.
-
-In edit mode, its audio toolset is limited to:
-
-- Robot text-to-speech generated from the text supplied for a tile.
-
-### Full edition
-
-The Full edition is intended for newer, more capable Android devices. In edit mode, a user should be able to supply text for a new tile and choose from:
-
+The app is a single Full edition, for newer, more capable Android devices. In edit mode, a user should be able to supply text for a new tile and choose from:
 - Robot text-to-speech.
 - **Sonia**, a British female AI voice.
 - A British male AI voice, which is still to be selected.
@@ -44,10 +31,8 @@ The choice of the British male AI voice remains an open product decision and sho
 - Keep the core communication experience simple, predictable, and easy to understand.
 - Prioritise accessibility over decorative complexity.
 - Treat soundboard users respectfully and design for dignity and independence.
-- Keep the Lite edition genuinely usable on older and low-memory hardware.
 - Keep the app free to users.
 - Make customisation approachable for non-technical parents, relatives, carers, and support workers.
-- Do not silently remove or blur the distinction between the Lite and Full editions.
 
 ## Scope boundary for AI assistants
 

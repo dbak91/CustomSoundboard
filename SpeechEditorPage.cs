@@ -107,7 +107,6 @@ public class SpeechEditorPage : ContentPage
     {
         var editor = new SpeechEditorPage(voices, player, page, index);
         await navigation.PushModalAsync(editor);
-        editor._words.Focus();
         return await editor._result.Task;
     }
 

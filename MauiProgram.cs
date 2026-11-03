@@ -11,10 +11,9 @@ public static class MauiProgram
         builder.UseMauiApp<App>();
 
         builder.Services.AddSingleton<ISoundPlayer, AndroidSoundPlayer>();
-#if SOUNDBOARD_FULL
         builder.Services.AddSingleton<IAudioRecorder, AndroidAudioRecorder>();
-#endif
         builder.Services.AddSingleton<ISpeechSynthesizer, AndroidSpeechSynthesizer>();
+        builder.Services.AddSingleton<INeuralVoice, NeuralVoice>();
         builder.Services.AddSingleton<MainPage>();
 
         return builder.Build();

@@ -8,33 +8,29 @@ installs a build.
 
 ## 2. Create the signing key (once, ever)
 
-One key signs both apps. Full and Lite have different application IDs, so Android treats them
-as separate apps, and each only needs every update signed with the key it was first installed with.
-
 From the folder containing `CustomSoundboard.csproj`:
 
 ```powershell
 .\scripts\New-SigningKey.ps1
 ```
 
-It asks you to choose a password, then writes the key, a file holding its password, and the build
+It asks you to choose a password (or, with `-GeneratePassword`, makes a strong random one), then writes the key, a file holding its password, and the build
 settings to `release-signing\` (excluded from Git). It refuses to run if a key already exists.
 
 Back up the whole `release-signing\` folder somewhere safe, away from this PC. Every future update
 must be signed with the same key. If the key is lost, tablets must uninstall the app first,
 which deletes its tiles.
 
-## 3. Build both signed APKs
+## 3. Build the signed APK
 
 ```powershell
 .\scripts\Publish-Release.ps1
 ```
 
-This builds Full and Lite, signs both with the release key, checks the signatures, and writes:
+This builds the app, signs it with the release key, checks the signature, and writes:
 
 ```text
 artifacts\release\<version>\CustomSoundboard-Full-<version>.apk
-artifacts\release\<version>\CustomSoundboard-Lite-<version>.apk
 ```
 
 ## 4. Install on the tablet
@@ -45,5 +41,5 @@ artifacts\release\<version>\CustomSoundboard-Lite-<version>.apk
 
 ## Updating later
 
-Bump `ApplicationDisplayVersion` (for example `1.1`) and `ApplicationVersion` (increase by 1
-every time), then repeat step 3 and install over the top. Full and Lite share these numbers.
+Bump `ApplicationDisplayVersion` (for example `1.2`) and `ApplicationVersion` (increase by 1
+every time), then repeat step 3 and install over the top.
