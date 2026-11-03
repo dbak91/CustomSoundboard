@@ -1,0 +1,61 @@
+<Project>
+  <!-- Generated from manifest.csv (lite = 1): the symbols the Lite edition packages, at 128px. -->
+  <ItemGroup>
+    <MauiImage Include="Resources\Packs\Mulberry\mb_hungry.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_thirsty.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_eat.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_drink.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_water.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_milk.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_banana.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_toast.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_pizza.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_chips.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_sausages.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_crisps.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_ice_cream.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_cake.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_toilet.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_wash_hands.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_brush_teeth.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_shower.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_bath.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_get_dressed.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_sleep.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_bed_time.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_help.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_want.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_more.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_finish.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_play.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_swing.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_music.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_tablet.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_tv.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_home.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_school.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_outside.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_car.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_stairs.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_mum.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\Mulberry\mb_dad.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_yes.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_no.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_thumbs_up.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_thumbs_down.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_please.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_hello.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_stop.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_love.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_thank_you.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_happy.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_sad.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_angry.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_scared.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_tired.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_poorly.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_hurt.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_too_hot.svg" BaseSize="128,128" />
+    <MauiImage Include="Resources\Packs\OpenMoji\om_too_cold.svg" BaseSize="128,128" />
+  </ItemGroup>
+</Project>

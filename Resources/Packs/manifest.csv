@@ -1,0 +1,501 @@
+pack,label,file,lite
+Mulberry,Hungry,mb_hungry.svg,1
+Mulberry,Thirsty,mb_thirsty.svg,1
+Mulberry,Yummy,mb_yummy.svg,0
+Mulberry,Yucky,mb_yucky.svg,0
+Mulberry,Eat,mb_eat.svg,1
+Mulberry,Drink,mb_drink.svg,1
+Mulberry,Breakfast,mb_breakfast.svg,0
+Mulberry,Lunch,mb_lunch.svg,0
+Mulberry,Dinner,mb_dinner.svg,0
+Mulberry,Water,mb_water.svg,1
+Mulberry,Milk,mb_milk.svg,1
+Mulberry,Orange juice,mb_orange_juice.svg,0
+Mulberry,Banana,mb_banana.svg,1
+Mulberry,Grapes,mb_grapes.svg,0
+Mulberry,Orange,mb_orange.svg,0
+Mulberry,Toast,mb_toast.svg,1
+Mulberry,Cereal,mb_cereal.svg,0
+Mulberry,Egg,mb_egg.svg,0
+Mulberry,Sandwich,mb_sandwich.svg,0
+Mulberry,Pizza,mb_pizza.svg,1
+Mulberry,Pasta,mb_pasta.svg,0
+Mulberry,Rice,mb_rice.svg,0
+Mulberry,Chips,mb_chips.svg,1
+Mulberry,Sausages,mb_sausages.svg,1
+Mulberry,Chicken,mb_chicken.svg,0
+Mulberry,Curry,mb_curry.svg,0
+Mulberry,Crisps,mb_crisps.svg,1
+Mulberry,Biscuit,mb_biscuit.svg,0
+Mulberry,Chocolate,mb_chocolate.svg,0
+Mulberry,Sweet,mb_sweet.svg,0
+Mulberry,Ice cream,mb_ice_cream.svg,1
+Mulberry,Cake,mb_cake.svg,1
+Mulberry,Toilet,mb_toilet.svg,1
+Mulberry,Need toilet,mb_need_toilet.svg,0
+Mulberry,Wash hands,mb_wash_hands.svg,1
+Mulberry,Brush teeth,mb_brush_teeth.svg,1
+Mulberry,Shower,mb_shower.svg,1
+Mulberry,Bath,mb_bath.svg,1
+Mulberry,Get dressed,mb_get_dressed.svg,1
+Mulberry,Brush hair,mb_brush_hair.svg,0
+Mulberry,Change nappy,mb_change_nappy.svg,0
+Mulberry,Pyjamas,mb_pyjamas.svg,0
+Mulberry,Sleep,mb_sleep.svg,1
+Mulberry,Bed time,mb_bed_time.svg,1
+Mulberry,Tummy ache,mb_tummy_ache.svg,0
+Mulberry,Help,mb_help.svg,1
+Mulberry,Want,mb_want.svg,1
+Mulberry,Hug,mb_hug.svg,0
+Mulberry,More,mb_more.svg,1
+Mulberry,Enough,mb_enough.svg,0
+Mulberry,Finish,mb_finish.svg,1
+Mulberry,Quiet,mb_quiet.svg,0
+Mulberry,Loud,mb_loud.svg,0
+Mulberry,Play,mb_play.svg,1
+Mulberry,Dance,mb_dance.svg,0
+Mulberry,Sing,mb_sing.svg,0
+Mulberry,Walk,mb_walk.svg,0
+Mulberry,Run,mb_run.svg,0
+Mulberry,Jump,mb_jump.svg,0
+Mulberry,Swim,mb_swim.svg,0
+Mulberry,Draw,mb_draw.svg,0
+Mulberry,Read,mb_read.svg,0
+Mulberry,Swing,mb_swing.svg,1
+Mulberry,Slide,mb_slide.svg,0
+Mulberry,Trampoline,mb_trampoline.svg,0
+Mulberry,Bubbles,mb_bubbles.svg,0
+Mulberry,Ball,mb_ball.svg,0
+Mulberry,Music,mb_music.svg,1
+Mulberry,Tablet,mb_tablet.svg,1
+Mulberry,TV,mb_tv.svg,1
+Mulberry,Home,mb_home.svg,1
+Mulberry,School,mb_school.svg,1
+Mulberry,Shop,mb_shop.svg,0
+Mulberry,Park,mb_park.svg,0
+Mulberry,Garden,mb_garden.svg,0
+Mulberry,Outside,mb_outside.svg,1
+Mulberry,Car,mb_car.svg,1
+Mulberry,Stairs,mb_stairs.svg,1
+Mulberry,Dog,mb_dog.svg,0
+Mulberry,Cat,mb_cat.svg,0
+Mulberry,Mum,mb_mum.svg,1
+Mulberry,Dad,mb_dad.svg,1
+Mulberry,Teacher,mb_teacher.svg,0
+Mulberry,Medicine,mb_medicine.svg,0
+Mulberry,Headache,mb_headache.svg,0
+Mulberry,Toothache,mb_toothache.svg,0
+Mulberry,Wait,mb_wait.svg,0
+Mulberry,Hello,mb_hello.svg,0
+Mulberry,Wake up,mb_wake_up.svg,0
+Mulberry,Bus,mb_bus.svg,0
+Mulberry,Train,mb_train.svg,0
+Mulberry,Look,mb_look.svg,0
+Mulberry,Listen,mb_listen.svg,0
+Mulberry,Open,mb_open.svg,0
+Mulberry,Close,mb_close.svg,0
+Mulberry,Go,mb_go.svg,0
+Mulberry,Come,mb_come.svg,0
+Mulberry,Give,mb_give.svg,0
+Mulberry,Share,mb_share.svg,0
+OpenMoji,Yes,om_yes.svg,1
+OpenMoji,No,om_no.svg,1
+OpenMoji,Thumbs up,om_thumbs_up.svg,1
+OpenMoji,Thumbs down,om_thumbs_down.svg,1
+OpenMoji,Please,om_please.svg,1
+OpenMoji,Hello,om_hello.svg,1
+OpenMoji,Stop,om_stop.svg,1
+OpenMoji,Wait (hand),om_wait_hand.svg,0
+OpenMoji,Love,om_love.svg,1
+OpenMoji,Hug (face),om_hug_face.svg,0
+OpenMoji,Thank you,om_thank_you.svg,1
+OpenMoji,High five,om_high_five.svg,0
+OpenMoji,Well done,om_well_done.svg,0
+OpenMoji,Celebrate,om_celebrate.svg,0
+OpenMoji,Cool,om_cool.svg,0
+OpenMoji,Happy,om_happy.svg,1
+OpenMoji,Very happy,om_very_happy.svg,0
+OpenMoji,Laughing,om_laughing.svg,0
+OpenMoji,Sad,om_sad.svg,1
+OpenMoji,Crying,om_crying.svg,0
+OpenMoji,Angry,om_angry.svg,1
+OpenMoji,Scared,om_scared.svg,1
+OpenMoji,Screaming,om_screaming.svg,0
+OpenMoji,Worried,om_worried.svg,0
+OpenMoji,Confused,om_confused.svg,0
+OpenMoji,Bored,om_bored.svg,0
+OpenMoji,Tired,om_tired.svg,1
+OpenMoji,Sleeping,om_sleeping.svg,0
+OpenMoji,Yawning,om_yawning.svg,0
+OpenMoji,Poorly,om_poorly.svg,1
+OpenMoji,Feel sick,om_feel_sick.svg,0
+OpenMoji,Hurt,om_hurt.svg,1
+OpenMoji,Too hot,om_too_hot.svg,1
+OpenMoji,Too cold,om_too_cold.svg,1
+OpenMoji,Surprised,om_surprised.svg,0
+OpenMoji,Relieved,om_relieved.svg,0
+OpenMoji,Thinking,om_thinking.svg,0
+OpenMoji,Silly,om_silly.svg,0
+OpenMoji,Shh quiet,om_shh_quiet.svg,0
+OpenMoji,Upset with you,om_upset_with_you.svg,0
+OpenMoji,Ear,om_ear.svg,0
+OpenMoji,Eyes,om_eyes.svg,0
+OpenMoji,Mouth,om_mouth.svg,0
+OpenMoji,Speak,om_speak.svg,0
+OpenMoji,Point right,om_point_right.svg,0
+OpenMoji,Point left,om_point_left.svg,0
+OpenMoji,Fist bump,om_fist_bump.svg,0
+OpenMoji,Victory,om_victory.svg,0
+OpenMoji,OK,om_ok.svg,0
+OpenMoji,Hand,om_hand.svg,0
+OpenMoji,Wheelchair,om_wheelchair.svg,0
+OpenMoji,Hearing aid,om_hearing_aid.svg,0
+OpenMoji,Alarm,om_alarm.svg,0
+OpenMoji,Time passing,om_time_passing.svg,0
+OpenMoji,Sun,om_sun.svg,0
+OpenMoji,Rain,om_rain.svg,0
+OpenMoji,Hospital,om_hospital.svg,0
+OpenMoji,Pill,om_pill.svg,0
+OpenMoji,Thermometer,om_thermometer.svg,0
+OpenMoji,Bathtub,om_bathtub.svg,0
+OpenMoji,Toothbrush,om_toothbrush.svg,0
+OpenMoji,Soap,om_soap.svg,0
+OpenMoji,Phone,om_phone.svg,0
+OpenMoji,Video games,om_video_games.svg,0
+OpenMoji,Puzzle,om_puzzle.svg,0
+OpenMoji,Balloon,om_balloon.svg,0
+OpenMoji,Gift,om_gift.svg,0
+OpenMoji,Baby bottle,om_baby_bottle.svg,0
+OpenMoji,Milkshake straw,om_milkshake_straw.svg,0
+OpenMoji,Books,om_books.svg,0
+OpenMoji,Crayon,om_crayon.svg,0
+OpenMoji,Baby,om_baby.svg,0
+OpenMoji,Family,om_family.svg,0
+OpenMoji,Girl,om_girl.svg,0
+Mulberry,What,mb_what.svg,0
+Mulberry,Where,mb_where.svg,0
+Mulberry,Who,mb_who.svg,0
+Mulberry,When,mb_when.svg,0
+Mulberry,Why,mb_why.svg,0
+Mulberry,How,mb_how.svg,0
+Mulberry,Which,mb_which.svg,0
+OpenMoji,I don't know,om_i_don_t_know.svg,0
+OpenMoji,My turn,om_my_turn.svg,0
+OpenMoji,You,om_you.svg,0
+OpenMoji,Question,om_question.svg,0
+OpenMoji,Not allowed,om_not_allowed.svg,0
+Mulberry,Communication book,mb_communication_book.svg,0
+Mulberry,Up,mb_up.svg,0
+Mulberry,Down,mb_down.svg,0
+Mulberry,In,mb_in.svg,0
+Mulberry,Out,mb_out.svg,0
+Mulberry,On,mb_on.svg,0
+Mulberry,Off,mb_off.svg,0
+Mulberry,Under,mb_under.svg,0
+Mulberry,Over,mb_over.svg,0
+Mulberry,Behind,mb_behind.svg,0
+Mulberry,In front,mb_in_front.svg,0
+Mulberry,Next to,mb_next_to.svg,0
+Mulberry,Left,mb_left.svg,0
+Mulberry,Right,mb_right.svg,0
+Mulberry,First,mb_first.svg,0
+Mulberry,Last,mb_last.svg,0
+Mulberry,Next,mb_next.svg,0
+Mulberry,Between,mb_between.svg,0
+Mulberry,Near,mb_near.svg,0
+Mulberry,Away,mb_away.svg,0
+Mulberry,Some,mb_some.svg,0
+Mulberry,Empty,mb_empty.svg,0
+Mulberry,Full,mb_full.svg,0
+Mulberry,Little,mb_little.svg,0
+Mulberry,Big,mb_big.svg,0
+Mulberry,Same,mb_same.svg,0
+Mulberry,Favourite,mb_favourite.svg,0
+Mulberry,Good,mb_good.svg,0
+Mulberry,Bad,mb_bad.svg,0
+Mulberry,Broken,mb_broken.svg,0
+Mulberry,Dirty,mb_dirty.svg,0
+Mulberry,Clean,mb_clean.svg,0
+Mulberry,Wet,mb_wet.svg,0
+Mulberry,Dry,mb_dry.svg,0
+Mulberry,Hot,mb_hot.svg,0
+Mulberry,Wrong,mb_wrong.svg,0
+Mulberry,Correct,mb_correct.svg,0
+Mulberry,Messy,mb_messy.svg,0
+Mulberry,Fast,mb_fast.svg,0
+Mulberry,Ready,mb_ready.svg,0
+Mulberry,Scary,mb_scary.svg,0
+Mulberry,Funny,mb_funny.svg,0
+Mulberry,Now,mb_now.svg,0
+Mulberry,Today,mb_today.svg,0
+Mulberry,Tomorrow,mb_tomorrow.svg,0
+Mulberry,Yesterday,mb_yesterday.svg,0
+Mulberry,Morning,mb_morning.svg,0
+Mulberry,Night,mb_night.svg,0
+Mulberry,Day,mb_day.svg,0
+Mulberry,Week,mb_week.svg,0
+Mulberry,Weekend,mb_weekend.svg,0
+Mulberry,Later,mb_later.svg,0
+Mulberry,One minute,mb_one_minute.svg,0
+Mulberry,Clock,mb_clock.svg,0
+Mulberry,Break time,mb_break_time.svg,0
+Mulberry,Birthday,mb_birthday.svg,0
+Mulberry,Ask,mb_ask.svg,0
+Mulberry,Bring,mb_bring.svg,0
+Mulberry,Clap,mb_clap.svg,0
+Mulberry,Climb,mb_climb.svg,0
+Mulberry,Cut,mb_cut.svg,0
+Mulberry,Find,mb_find.svg,0
+Mulberry,Get,mb_get.svg,0
+Mulberry,Get up,mb_get_up.svg,0
+Mulberry,Hold,mb_hold.svg,0
+Mulberry,Hold hands,mb_hold_hands.svg,0
+Mulberry,Hit,mb_hit.svg,0
+Mulberry,Kick,mb_kick.svg,0
+Mulberry,Make,mb_make.svg,0
+Mulberry,Pick up,mb_pick_up.svg,0
+Mulberry,Pull,mb_pull.svg,0
+Mulberry,Push,mb_push.svg,0
+Mulberry,Put away,mb_put_away.svg,0
+Mulberry,Shout,mb_shout.svg,0
+Mulberry,Show me,mb_show_me.svg,0
+Mulberry,Sit,mb_sit.svg,0
+Mulberry,Smile,mb_smile.svg,0
+Mulberry,Spill,mb_spill.svg,0
+Mulberry,Stand,mb_stand.svg,0
+Mulberry,Take,mb_take.svg,0
+Mulberry,Talk,mb_talk.svg,0
+Mulberry,Think,mb_think.svg,0
+Mulberry,Throw away,mb_throw_away.svg,0
+Mulberry,Turn on,mb_turn_on.svg,0
+Mulberry,Turn off,mb_turn_off.svg,0
+Mulberry,Go downstairs,mb_go_downstairs.svg,0
+Mulberry,Wash face,mb_wash_face.svg,0
+Mulberry,Watch,mb_watch.svg,0
+Mulberry,Write,mb_write.svg,0
+Mulberry,Bite,mb_bite.svg,0
+Mulberry,Lie down,mb_lie_down.svg,0
+Mulberry,Tidy up,mb_tidy_up.svg,0
+Mulberry,Wash up,mb_wash_up.svg,0
+Mulberry,Excited,mb_excited.svg,0
+Mulberry,Disgusted,mb_disgusted.svg,0
+OpenMoji,Embarrassed,om_embarrassed.svg,0
+OpenMoji,Nervous,om_nervous.svg,0
+OpenMoji,Dizzy,om_dizzy.svg,0
+Mulberry,Flush,mb_flush.svg,0
+Mulberry,Dry hands,mb_dry_hands.svg,0
+Mulberry,Wash hair,mb_wash_hair.svg,0
+Mulberry,Haircut,mb_haircut.svg,0
+Mulberry,Toilet roll,mb_toilet_roll.svg,0
+Mulberry,Towel,mb_towel.svg,0
+Mulberry,Tissues,mb_tissues.svg,0
+Mulberry,Hairbrush,mb_hairbrush.svg,0
+Mulberry,Nappy,mb_nappy.svg,0
+Mulberry,Plaster,mb_plaster.svg,0
+Mulberry,Inhaler,mb_inhaler.svg,0
+Mulberry,Glasses,mb_glasses.svg,0
+Mulberry,First aid,mb_first_aid.svg,0
+Mulberry,Cut (hurt),mb_cut_hurt.svg,0
+Mulberry,Rash,mb_rash.svg,0
+Mulberry,Cold (sneezing),mb_cold_sneezing.svg,0
+Mulberry,Back ache,mb_back_ache.svg,0
+Mulberry,Be sick,mb_be_sick.svg,0
+Mulberry,Seizure,mb_seizure.svg,0
+Mulberry,Doctor's surgery,mb_doctor_s_surgery.svg,0
+Mulberry,Ambulance,mb_ambulance.svg,0
+Mulberry,Head,mb_head.svg,0
+Mulberry,Teeth,mb_teeth.svg,0
+Mulberry,Arm,mb_arm.svg,0
+Mulberry,Leg,mb_leg.svg,0
+Mulberry,Knee,mb_knee.svg,0
+Mulberry,Foot,mb_foot.svg,0
+Mulberry,Back,mb_back.svg,0
+Mulberry,Tummy,mb_tummy.svg,0
+Mulberry,Bottom,mb_bottom.svg,0
+Mulberry,Throat,mb_throat.svg,0
+Mulberry,Brother,mb_brother.svg,0
+Mulberry,Sister,mb_sister.svg,0
+Mulberry,Nan,mb_nan.svg,0
+Mulberry,Grandad,mb_grandad.svg,0
+Mulberry,Auntie,mb_auntie.svg,0
+Mulberry,Uncle,mb_uncle.svg,0
+OpenMoji,Boy,om_boy.svg,0
+OpenMoji,Man,om_man.svg,0
+OpenMoji,Woman,om_woman.svg,0
+OpenMoji,Friends,om_friends.svg,0
+OpenMoji,Doctor,om_doctor.svg,0
+OpenMoji,Police,om_police.svg,0
+Mulberry,Church,mb_church.svg,0
+Mulberry,Classroom,mb_classroom.svg,0
+Mulberry,Sensory room,mb_sensory_room.svg,0
+Mulberry,Cafe,mb_cafe.svg,0
+Mulberry,Beach,mb_beach.svg,0
+Mulberry,Lift,mb_lift.svg,0
+Mulberry,Holiday,mb_holiday.svg,0
+OpenMoji,Cinema,om_cinema.svg,0
+Mulberry,Bed,mb_bed.svg,0
+Mulberry,Chair,mb_chair.svg,0
+Mulberry,Table,mb_table.svg,0
+Mulberry,Sofa,mb_sofa.svg,0
+Mulberry,Door,mb_door.svg,0
+Mulberry,Light,mb_light.svg,0
+Mulberry,Fridge,mb_fridge.svg,0
+Mulberry,Blanket,mb_blanket.svg,0
+Mulberry,Bin,mb_bin.svg,0
+Mulberry,Cup,mb_cup.svg,0
+Mulberry,Plate,mb_plate.svg,0
+Mulberry,Bowl,mb_bowl.svg,0
+Mulberry,Spoon,mb_spoon.svg,0
+Mulberry,Fork,mb_fork.svg,0
+Mulberry,Knife,mb_knife.svg,0
+Mulberry,Straw,mb_straw.svg,0
+Mulberry,Food,mb_food.svg,0
+Mulberry,Drinks,mb_drinks.svg,0
+Mulberry,Apple,mb_apple.svg,0
+Mulberry,Pear,mb_pear.svg,0
+Mulberry,Strawberry,mb_strawberry.svg,0
+Mulberry,Fruit,mb_fruit.svg,0
+Mulberry,Vegetables,mb_vegetables.svg,0
+Mulberry,Carrot,mb_carrot.svg,0
+Mulberry,Peas,mb_peas.svg,0
+Mulberry,Potato,mb_potato.svg,0
+Mulberry,Tomato,mb_tomato.svg,0
+Mulberry,Salad,mb_salad.svg,0
+Mulberry,Cheese,mb_cheese.svg,0
+Mulberry,Yoghurt,mb_yoghurt.svg,0
+Mulberry,Bread,mb_bread.svg,0
+Mulberry,Beans,mb_beans.svg,0
+Mulberry,Soup,mb_soup.svg,0
+Mulberry,Burger,mb_burger.svg,0
+Mulberry,Hot dog,mb_hot_dog.svg,0
+Mulberry,Fish and chips,mb_fish_and_chips.svg,0
+Mulberry,Chicken nuggets,mb_chicken_nuggets.svg,0
+Mulberry,Spaghetti,mb_spaghetti.svg,0
+Mulberry,Jelly,mb_jelly.svg,0
+Mulberry,Lollipop,mb_lollipop.svg,0
+Mulberry,Birthday cake,mb_birthday_cake.svg,0
+Mulberry,Pudding,mb_pudding.svg,0
+Mulberry,Tea,mb_tea.svg,0
+Mulberry,Hot chocolate,mb_hot_chocolate.svg,0
+Mulberry,Fizzy drink,mb_fizzy_drink.svg,0
+Mulberry,Milkshake,mb_milkshake.svg,0
+Mulberry,Nuts,mb_nuts.svg,0
+OpenMoji,Popcorn,om_popcorn.svg,0
+Mulberry,Coat,mb_coat.svg,0
+Mulberry,Jumper,mb_jumper.svg,0
+Mulberry,T-shirt,mb_t_shirt.svg,0
+Mulberry,Trousers,mb_trousers.svg,0
+Mulberry,Shorts,mb_shorts.svg,0
+Mulberry,Dress,mb_dress.svg,0
+Mulberry,Socks,mb_socks.svg,0
+Mulberry,Trainers,mb_trainers.svg,0
+Mulberry,Shoes,mb_shoes.svg,0
+Mulberry,Woolly hat,mb_woolly_hat.svg,0
+Mulberry,Gloves,mb_gloves.svg,0
+Mulberry,Pants,mb_pants.svg,0
+Mulberry,Swimming costume,mb_swimming_costume.svg,0
+Mulberry,School bag,mb_school_bag.svg,0
+Mulberry,Teddy,mb_teddy.svg,0
+Mulberry,Doll,mb_doll.svg,0
+Mulberry,Toy car,mb_toy_car.svg,0
+Mulberry,Blocks,mb_blocks.svg,0
+Mulberry,Colouring book,mb_colouring_book.svg,0
+Mulberry,Stickers,mb_stickers.svg,0
+Mulberry,Kite,mb_kite.svg,0
+Mulberry,Dinosaur,mb_dinosaur.svg,0
+Mulberry,Toys,mb_toys.svg,0
+Mulberry,Climbing frame,mb_climbing_frame.svg,0
+Mulberry,Bike,mb_bike.svg,0
+OpenMoji,Scooter,om_scooter.svg,0
+Mulberry,Headphones,mb_headphones.svg,0
+Mulberry,Camera,mb_camera.svg,0
+Mulberry,Computer,mb_computer.svg,0
+Mulberry,Drum,mb_drum.svg,0
+Mulberry,Pencil,mb_pencil.svg,0
+Mulberry,Pen,mb_pen.svg,0
+Mulberry,Scissors,mb_scissors.svg,0
+Mulberry,Paper,mb_paper.svg,0
+Mulberry,Maths,mb_maths.svg,0
+Mulberry,PE,mb_pe.svg,0
+Mulberry,Art,mb_art.svg,0
+Mulberry,Circle time,mb_circle_time.svg,0
+Mulberry,Time out,mb_time_out.svg,0
+Mulberry,Colours,mb_colours.svg,0
+Mulberry,Red,mb_red.svg,0
+Mulberry,Blue,mb_blue.svg,0
+Mulberry,Green,mb_green.svg,0
+Mulberry,Yellow,mb_yellow.svg,0
+OpenMoji,Orange (colour),om_orange_colour.svg,0
+Mulberry,Pink,mb_pink.svg,0
+Mulberry,Purple,mb_purple.svg,0
+Mulberry,Black,mb_black.svg,0
+Mulberry,White,mb_white.svg,0
+Mulberry,Brown,mb_brown.svg,0
+Mulberry,Grey,mb_grey.svg,0
+Mulberry,Circle,mb_circle.svg,0
+Mulberry,Square,mb_square.svg,0
+Mulberry,Triangle,mb_triangle.svg,0
+Mulberry,Heart,mb_heart.svg,0
+Mulberry,Rectangle,mb_rectangle.svg,0
+Mulberry,Cloudy,mb_cloudy.svg,0
+Mulberry,Snow,mb_snow.svg,0
+Mulberry,Rainbow,mb_rainbow.svg,0
+Mulberry,Storm,mb_storm.svg,0
+OpenMoji,Windy,om_windy.svg,0
+Mulberry,Flower,mb_flower.svg,0
+Mulberry,Tree,mb_tree.svg,0
+Mulberry,Horse,mb_horse.svg,0
+Mulberry,Cow,mb_cow.svg,0
+Mulberry,Sheep,mb_sheep.svg,0
+Mulberry,Pig,mb_pig.svg,0
+Mulberry,Duck,mb_duck.svg,0
+Mulberry,Hen,mb_hen.svg,0
+Mulberry,Bird,mb_bird.svg,0
+Mulberry,Fish,mb_fish.svg,0
+Mulberry,Rabbit,mb_rabbit.svg,0
+Mulberry,Mouse,mb_mouse.svg,0
+Mulberry,Elephant,mb_elephant.svg,0
+Mulberry,Lion,mb_lion.svg,0
+Mulberry,Tiger,mb_tiger.svg,0
+Mulberry,Bear,mb_bear.svg,0
+Mulberry,Frog,mb_frog.svg,0
+Mulberry,Butterfly,mb_butterfly.svg,0
+Mulberry,Spider,mb_spider.svg,0
+Mulberry,Aeroplane,mb_aeroplane.svg,0
+Mulberry,Boat,mb_boat.svg,0
+Mulberry,Taxi,mb_taxi.svg,0
+Mulberry,Fire engine,mb_fire_engine.svg,0
+Mulberry,Helicopter,mb_helicopter.svg,0
+Mulberry,Traffic lights,mb_traffic_lights.svg,0
+Mulberry,Christmas,mb_christmas.svg,0
+Mulberry,Easter egg,mb_easter_egg.svg,0
+Mulberry,Halloween,mb_halloween.svg,0
+Mulberry,Party,mb_party.svg,0
+Mulberry,Father Christmas,mb_father_christmas.svg,0
+Mulberry,Money,mb_money.svg,0
+Mulberry,Shopping basket,mb_shopping_basket.svg,0
+Mulberry,Suitcase,mb_suitcase.svg,0
+Mulberry,Photos,mb_photos.svg,0
+Mulberry,Letter,mb_letter.svg,0
+Mulberry,Football,mb_football.svg,0
+Mulberry,Tennis,mb_tennis.svg,0
+Mulberry,Basketball,mb_basketball.svg,0
+Mulberry,Exercise,mb_exercise.svg,0
+Mulberry,Afternoon,mb_afternoon.svg,0
+Mulberry,One hour,mb_one_hour.svg,0
+Mulberry,Calendar,mb_calendar.svg,0
+Mulberry,Tea time,mb_tea_time.svg,0
+Mulberry,Busy,mb_busy.svg,0
+Mulberry,Lost,mb_lost.svg,0
+Mulberry,Closed,mb_closed.svg,0
+Mulberry,Soft,mb_soft.svg,0
+Mulberry,Cold drink,mb_cold_drink.svg,0
+Mulberry,Hot drink,mb_hot_drink.svg,0
+Mulberry,Half,mb_half.svg,0
+Mulberry,Long,mb_long.svg,0
+Mulberry,Short,mb_short.svg,0
+Mulberry,Heavy,mb_heavy.svg,0
+Mulberry,Put,mb_put.svg,0
+Mulberry,Move,mb_move.svg,0
+Mulberry,Change clothes,mb_change_clothes.svg,0
+Mulberry,Drive,mb_drive.svg,0

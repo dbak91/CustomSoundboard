@@ -1,0 +1,84 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-android36.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CustomSoundboard</RootNamespace>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <ApplicationTitle>Custom Soundboard</ApplicationTitle>
+    <ApplicationId>uk.co.dbak91.customsoundboard</ApplicationId>
+    <ApplicationDisplayVersion>1.1</ApplicationDisplayVersion>
+    <ApplicationVersion>2</ApplicationVersion>
+
+    <SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
+
+    <!--
+      Full is the normal app. Build the smaller, older-device edition with:
+      dotnet publish -p:SoundboardEdition=Lite
+    -->
+    <SoundboardEdition Condition="'$(SoundboardEdition)' == ''">Full</SoundboardEdition>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(SoundboardEdition)' == 'Full'">
+    <DefineConstants>$(DefineConstants);SOUNDBOARD_FULL</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(SoundboardEdition)' == 'Lite'">
+    <DefineConstants>$(DefineConstants);SOUNDBOARD_LITE</DefineConstants>
+    <ApplicationTitle>Custom Soundboard Lite</ApplicationTitle>
+    <ApplicationId>uk.co.dbak91.customsoundboard.lite</ApplicationId>
+
+    <!-- Lite builds in its own folders, so Full and Lite builds never pick up each other's pictures. -->
+    <BaseOutputPath>bin\Lite\</BaseOutputPath>
+    <IntermediateOutputPath>obj\Lite\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+
+  <!-- The Lite APK contains no recording code. -->
+  <ItemGroup Condition="'$(SoundboardEdition)' == 'Lite'">
+    <Compile Remove="Platforms\Android\AndroidAudioRecorder.cs" />
+    <Compile Remove="Services\IAudioRecorder.cs" />
+  </ItemGroup>
+
+  <Target Name="ValidateSoundboardEdition" BeforeTargets="BeforeBuild">
+    <Error Condition="'$(SoundboardEdition)' != 'Full' and '$(SoundboardEdition)' != 'Lite'"
+           Text="SoundboardEdition must be Full or Lite." />
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="10.0.20" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" ForegroundScale="0.7" Color="#1E3A5F" />
+    <MauiImage Include="Resources\Images\*" />
+  </ItemGroup>
+
+  <!--
+    Symbol packs (Mulberry, OpenMoji) tiles can use, in both editions. One 384px WebP per symbol, made from the
+    SVGs beside it, loaded as symbols/<name>.webp. As MauiImages they would be packed at five screen sizes each,
+    which made 173 symbols take 22.7 MB. Lite limits how many it shows at once in SymbolPickerPage.
+  -->
+  <ItemGroup>
+    <MauiAsset Include="Resources\Packs\Full\*.webp" LogicalName="symbols/%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Sound files are loaded at runtime with FileSystem.OpenAppPackageFileAsync("sounds/<file>"). -->
+    <MauiAsset Include="Resources\Sounds\*.wav" LogicalName="sounds/%(Filename)%(Extension)" />
+    <MauiAsset Include="Resources\Sounds\*.mp3" LogicalName="sounds/%(Filename)%(Extension)" />
+    <MauiAsset Include="Resources\Sounds\*.m4a" LogicalName="sounds/%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiXaml Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+  </ItemGroup>
+
+  <Import Project="release-signing\CustomSoundboard.signing.props" Condition="Exists('release-signing\CustomSoundboard.signing.props')" />
+
+</Project>
