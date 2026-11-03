@@ -14,15 +14,9 @@ public class SymbolPickerPage : ContentPage
     private const string SelectedColor = "#1565C0";
     private const string UnselectedColor = "#EEEEEE";
 
-#if SOUNDBOARD_LITE
-    // Lite adds symbols a page at a time, as the user scrolls, so an old tablet never holds a whole pack in its grid.
-    private const int PageSize = 60;
-    private const int LoadMoreThreshold = 12;
-#else
-    // Full has the memory to show a whole pack at once.
-    private const int PageSize = int.MaxValue;
-    private const int LoadMoreThreshold = 0;
-#endif
+    // There are over 3000 symbols, so they are added a page at a time.
+    private const int PageSize = 300;
+    private const int LoadMoreThreshold = 30;
 
     private readonly TaskCompletionSource<Symbol?> _result = new();
     private readonly CollectionView _grid;
@@ -203,7 +197,7 @@ public class SymbolPickerPage : ContentPage
         ShowNextPage();
     }
 
-    // Adds the next page of matches. Lite calls this as the user nears the end of what is shown.
+    // Adds the next page of matches. This is called as the user nears the end of what is shown.
     private void ShowNextPage()
     {
         foreach (var symbol in _matches.Skip(_shown.Count).Take(PageSize))

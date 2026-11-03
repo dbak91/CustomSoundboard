@@ -4,10 +4,8 @@ using Android.OS;
 
 // Taking pictures needs this; Android asks the user on first use.
 [assembly: UsesPermission(Android.Manifest.Permission.Camera)]
-#if SOUNDBOARD_FULL
-// Only Full mode records sound. Both editions speak with the device's own voices offline.
+// Recording sound is used for the tile audio. Speech uses the device's own voices, offline.
 [assembly: UsesPermission(Android.Manifest.Permission.RecordAudio)]
-#endif
 
 namespace CustomSoundboard;
 

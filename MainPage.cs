@@ -34,8 +34,15 @@ public class MainPage : ContentPage
     private const string UploadAudioChoice = "Upload own audio";
     private const string RecordAudioChoice = "Record audio";
 
-    // Text to audio: the device's own voice, offered alongside any British voices.
-    private const string RobotVoiceName = "Robot voice";
+    // Text to audio: the device's own robot voice, offered alongside the AI voices packaged in the app.
+    private const string RobotVoiceName = "Robot";
+
+    private static readonly (string Name, string Kind, NeuralVoiceKind Voice)[] AiVoices =
+    [
+        ("English (British) female", "britishfemale", NeuralVoiceKind.BritishFemale),
+        ("English (British) male", "britishmale", NeuralVoiceKind.BritishMale),
+        ("English (Irish) female", "irishfemale", NeuralVoiceKind.IrishFemale),
+    ];
 
     // Edit image.
     private const string ChooseSymbolChoice = "Choose a symbol";
@@ -45,20 +52,16 @@ public class MainPage : ContentPage
     // Audio files the file picker offers.
     private static readonly FilePickerFileType AudioFileTypes = new(new Dictionary<DevicePlatform, IEnumerable<string>>
     {
-#if SOUNDBOARD_FULL
         [DevicePlatform.Android] = ["audio/*"],
-#else
-        [DevicePlatform.Android] = ["audio/mpeg"],
-#endif
     });
 
     // Page one: five across, two rows of five.
     private static readonly SoundTile[] PageOneTiles =
     [
-        new(string.Empty, "I want", "#FFF59D", "i_want.wav", "icon_want"),
+        new(string.Empty, "I want", "#FFF59D", "i_want.wav", "mb_want"),
         new(string.Empty, "Drink", "#90CAF9", "drink.wav", "icon_drink"),
-        new(string.Empty, "Food", "#FFE082", "food.wav", "icon_food"),
-        new(string.Empty, "Toilet", "#F06292", "toilet.wav", "icon_toilet"),
+        new(string.Empty, "Food", "#FFE082", "food.wav", "mb_dinner"),
+        new(string.Empty, "Toilet", "#F06292", "toilet.wav", "mb_toilet"),
         new(string.Empty, "Bedroom", "#9FA8DA", "bedroom.wav", "icon_bedroom"),
         new("👇", "Stay here", "#C5CAE9", "stay_here.wav"),
         new(string.Empty, "Help", "#E1BEE7", "help.wav", "icon_help"),
@@ -101,10 +104,9 @@ public class MainPage : ContentPage
     ];
 
     private readonly ISoundPlayer _player;
-#if SOUNDBOARD_FULL
     private readonly IAudioRecorder _recorder;
-#endif
     private readonly ISpeechSynthesizer _speech;
+    private readonly INeuralVoice _neuralVoice;
     private readonly ContentView _pageHost = new();
     private readonly Border _pageFrame;
     private readonly Grid _editRow;
@@ -137,17 +139,15 @@ public class MainPage : ContentPage
 
     public MainPage(
         ISoundPlayer player,
-#if SOUNDBOARD_FULL
         IAudioRecorder recorder,
-#endif
-        ISpeechSynthesizer speech
+        ISpeechSynthesizer speech,
+        INeuralVoice neuralVoice
     )
     {
         _player = player;
-#if SOUNDBOARD_FULL
         _recorder = recorder;
-#endif
         _speech = speech;
+        _neuralVoice = neuralVoice;
         _live = UserPageStore.Load();
         EnsureBuiltInPages();
         _pages = _live;
@@ -203,11 +203,13 @@ public class MainPage : ContentPage
             },
         };
         topRow.Add(tabScroll, 0, 0);
-        topRow.Add(new HorizontalStackLayout
+        var corner = new HorizontalStackLayout
         {
+            Spacing = 8,
             Padding = new Thickness(0, 8, 8, 8),
             Children = { _menuButton },
-        }, 1, 0);
+        };
+        topRow.Add(corner, 1, 0);
 
         // Shown only in edit mode: says the changes are a draft, with Cancel and Confirm.
         var editLabel = new Label
@@ -449,7 +451,7 @@ public class MainPage : ContentPage
             AddMenuButton($"Remove page {4 + pageIndex}", RemovePageColor, Colors.White, () => RemoveExtraPageAsync(pageIndex));
         }
 
-        AddMenuButton("Picture credits", CloseColor, Colors.Black, () => DisplayAlert("Picture credits", SymbolCatalog.Credits, "OK"));
+        AddMenuButton("Credits", CloseColor, Colors.Black, () => DisplayAlert("Credits", SymbolCatalog.Credits, "OK"));
         AddMenuButton("Close", CloseColor, Colors.Black, async () => { });
         _menuOverlay.IsVisible = true;
     }
@@ -926,13 +928,11 @@ public class MainPage : ContentPage
         }
     }
 
-    // Audio comes from typed words or from a file (or, in the Full edition, a recording).
+    // Audio comes from typed words or from a file (or a recording).
     private async Task<bool> EditAudioAsync(int page, int index, string title)
     {
         var choices = new List<string> { TextToAudioChoice, UploadAudioChoice };
-#if SOUNDBOARD_FULL
         choices.Add(RecordAudioChoice);
-#endif
         var choice = await ChooseAsync($"{title}: audio", "Back", choices.ToArray());
         if (choice == TextToAudioChoice)
         {
@@ -944,12 +944,10 @@ public class MainPage : ContentPage
             return await PickSoundAsync(page, index);
         }
 
-#if SOUNDBOARD_FULL
         if (choice == RecordAudioChoice)
         {
             return await RecordSoundAsync(page, index);
         }
-#endif
         return false;
     }
 
@@ -961,14 +959,12 @@ public class MainPage : ContentPage
         {
             voices.Add(new SpeechVoice(RobotVoiceName, "speech", (text, path) => _speech.SynthesizeAsync(text, path)));
         }
-#if SOUNDBOARD_FULL
-        // Full edition only: a British on-device voice speaks the words into a WAV file,
+        // The AI voices packaged in the app speak the words into a WAV file,
         // so the finished tile plays with no network connection.
-        foreach (var british in await _speech.GetBritishVoicesAsync())
+        foreach (var (name, kind, voice) in AiVoices)
         {
-            voices.Add(new SpeechVoice(british.DisplayName, "british", (text, path) => _speech.SynthesizeAsync(text, british.Id, path)));
+            voices.Add(new SpeechVoice(name, kind, (text, path) => _neuralVoice.SynthesizeAsync(voice, text, path)));
         }
-#endif
         if (voices.Count == 0)
         {
             await DisplayAlert("No voice", "This device has no voice to turn words into sound.", "OK");
@@ -1101,13 +1097,8 @@ public class MainPage : ContentPage
         }
 
         var extension = System.IO.Path.GetExtension(file.FileName).ToLowerInvariant();
-#if SOUNDBOARD_FULL
         var supported = extension is ".mp3" or ".wav" or ".m4a";
         const string supportedDescription = "Choose an MP3, WAV, or M4A audio file.";
-#else
-        var supported = extension == ".mp3";
-        const string supportedDescription = "Lite mode accepts MP3 audio files only.";
-#endif
         if (!supported)
         {
             await DisplayAlert("Unsupported audio", supportedDescription, "OK");
@@ -1119,7 +1110,6 @@ public class MainPage : ContentPage
         return true;
     }
 
-#if SOUNDBOARD_FULL
     private async Task<bool> RecordSoundAsync(int page, int index)
     {
         if (await Permissions.RequestAsync<Permissions.Microphone>() != PermissionStatus.Granted)
@@ -1137,7 +1127,6 @@ public class MainPage : ContentPage
         ReplaceSound(GetPage(_pages, page)[index], path);
         return true;
     }
-#endif
 
     private bool ClearTile(int page, int index)
     {

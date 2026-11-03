@@ -32,3 +32,10 @@ dotnet build CustomSoundboard.csproj
 ## Publish
 
 See [PUBLISHING.md](PUBLISHING.md).
+
+## Licence
+
+Custom Soundboard is free software, released under the GNU General Public License v3.0 (see `LICENSE`).
+The Full edition includes eSpeak NG (GPL-3.0) through sherpa-onnx, so the app's source is published under
+the same licence when the app is distributed. The pictures (Mulberry Symbols, OpenMoji) are CC BY-SA 4.0 and the
+voices have their own terms; see `Resources/Packs/ATTRIBUTION.md` and the in-app Credits.

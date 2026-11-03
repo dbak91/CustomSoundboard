@@ -1,0 +1,5 @@
+# Model card for southern_english_female (medium, from sherpa-onnx)
+
+* Language: en_GB (English, Great Britain)
+* Dataset: http://www.openslr.org/83/
+* License: CC-BY-SA 4.0 International

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0-android36.0</TargetFramework>
@@ -15,41 +15,13 @@
     <ApplicationVersion>2</ApplicationVersion>
 
     <SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
-
-    <!--
-      Full is the normal app. Build the smaller, older-device edition with:
-      dotnet publish -p:SoundboardEdition=Lite
-    -->
-    <SoundboardEdition Condition="'$(SoundboardEdition)' == ''">Full</SoundboardEdition>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(SoundboardEdition)' == 'Full'">
-    <DefineConstants>$(DefineConstants);SOUNDBOARD_FULL</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(SoundboardEdition)' == 'Lite'">
-    <DefineConstants>$(DefineConstants);SOUNDBOARD_LITE</DefineConstants>
-    <ApplicationTitle>Custom Soundboard Lite</ApplicationTitle>
-    <ApplicationId>uk.co.dbak91.customsoundboard.lite</ApplicationId>
-
-    <!-- Lite builds in its own folders, so Full and Lite builds never pick up each other's pictures. -->
-    <BaseOutputPath>bin\Lite\</BaseOutputPath>
-    <IntermediateOutputPath>obj\Lite\$(Configuration)\</IntermediateOutputPath>
-  </PropertyGroup>
-
-  <!-- The Lite APK contains no recording code. -->
-  <ItemGroup Condition="'$(SoundboardEdition)' == 'Lite'">
-    <Compile Remove="Platforms\Android\AndroidAudioRecorder.cs" />
-    <Compile Remove="Services\IAudioRecorder.cs" />
-  </ItemGroup>
-
-  <Target Name="ValidateSoundboardEdition" BeforeTargets="BeforeBuild">
-    <Error Condition="'$(SoundboardEdition)' != 'Full' and '$(SoundboardEdition)' != 'Lite'"
-           Text="SoundboardEdition must be Full or Lite." />
-  </Target>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui.Controls" Version="10.0.20" />
+    <PackageReference Include="org.k2fsa.sherpa.onnx" Version="1.13.8" />
+    <PackageReference Include="org.k2fsa.sherpa.onnx.runtime.android-arm64" Version="1.13.8" />
+    <PackageReference Include="org.k2fsa.sherpa.onnx.runtime.android-x64" Version="1.13.8" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,12 +30,17 @@
   </ItemGroup>
 
   <!--
-    Symbol packs (Mulberry, OpenMoji) tiles can use, in both editions. One 384px WebP per symbol, made from the
-    SVGs beside it, loaded as symbols/<name>.webp. As MauiImages they would be packed at five screen sizes each,
-    which made 173 symbols take 22.7 MB. Lite limits how many it shows at once in SymbolPickerPage.
+    Symbol packs (Mulberry, OpenMoji) tiles can use. One 384px WebP per symbol, loaded as symbols/<name>.webp.
+    As MauiImages they would be packed at five screen sizes each, which made 173 symbols take 22.7 MB.
+    All 3,087 are packaged.
   -->
   <ItemGroup>
     <MauiAsset Include="Resources\Packs\Full\*.webp" LogicalName="symbols/%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <!-- The two British AI voices (Piper): Sonia (jenny_dioco) and a male voice (alan). Unpacked to app storage on first use as voices/<file>. -->
+  <ItemGroup>
+    <MauiAsset Include="Resources\Voices\*.onnx;Resources\Voices\*-tokens.txt;Resources\Voices\espeak-ng-data.zip" LogicalName="voices/%(Filename)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,10 +1,10 @@
-<#
+﻿<#
 .SYNOPSIS
-    Builds signed release APKs of both the Full and the Lite app.
+    Builds the signed release APK of the Full app.
 
 .DESCRIPTION
-    Both are signed with the release key from scripts\New-SigningKey.ps1, then checked, and copied to
-    artifacts\release\<version>\ as CustomSoundboard-Full-<version>.apk and CustomSoundboard-Lite-<version>.apk.
+    It is signed with the release key from scripts\New-SigningKey.ps1, then checked, and copied to
+    artifacts\release\<version>\ as CustomSoundboard-Full-<version>.apk.
 
     Before each release, raise ApplicationDisplayVersion and ApplicationVersion in CustomSoundboard.csproj,
     or the tablets will not accept the new APK as an update.
@@ -31,15 +31,14 @@ $apksigner = if ($sdk) {
     Get-ChildItem "$sdk\build-tools\*\apksigner.bat" | Sort-Object { [version]$_.Directory.Name } | Select-Object -Last 1
 }
 
-$expected = $null
-foreach ($edition in "Full", "Lite") {
+foreach ($edition in "Full") {
     Write-Host "Building $edition $version..." -ForegroundColor Cyan
-    & dotnet publish $project -c Release -f $framework -p:SoundboardEdition=$edition -p:AndroidPackageFormat=apk -nologo -v q
+    & dotnet publish $project -c Release -f $framework -p:AndroidPackageFormat=apk -nologo -v q
     if ($LASTEXITCODE -ne 0) {
         Write-Error "The $edition build failed."
     }
 
-    $bin = if ($edition -eq "Lite") { "bin\Lite" } else { "bin" }
+    $bin = "bin"
     $apk = Get-ChildItem (Join-Path $root "$bin\Release\$framework\publish\*-Signed.apk") |
         Sort-Object LastWriteTime | Select-Object -Last 1
     $target = Join-Path $output "CustomSoundboard-$edition-$version.apk"
@@ -51,23 +50,16 @@ foreach ($edition in "Full", "Lite") {
             Write-Error "$target is not correctly signed."
         }
 
-        # Both editions must carry the same release certificate, never the debug one.
-        $certificate = ($report | Select-String "certificate SHA-256 digest: (.+)").Matches[0].Groups[1].Value
         if ($report -match "CN=Android Debug") {
             Write-Error "$target was signed with the debug key, not the release key."
         }
-        if ($expected -and $certificate -ne $expected) {
-            Write-Error "Full and Lite were signed with different keys."
-        }
-        $expected = $certificate
+
     }
 
     $size = [math]::Round((Get-Item $target).Length / 1MB, 1)
     Write-Host "  $target ($size MB)" -ForegroundColor Green
 }
 
-if ($expected) {
-    Write-Host "Both APKs are signed with the release key (SHA-256 $expected)."
-} else {
-    Write-Warning "apksigner was not found, so the signatures were not checked."
+if (-not $apksigner) {
+    Write-Warning "apksigner was not found, so the signature was not checked."
 }
