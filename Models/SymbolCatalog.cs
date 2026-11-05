@@ -26,9 +26,9 @@ public static class SymbolCatalog
     public const string Credits =
         "Mulberry Symbols by Steve Lee are licensed under the Creative Commons Attribution-ShareAlike 4.0 License (mulberrysymbols.org).\n\n" +
         "Emoji designed by OpenMoji, the open-source emoji and icon project. License: CC BY-SA 4.0 (openmoji.org).\n\n" +
-        "Voices: \"Jenny (Dioco)\" is the Irish female voice (github.com/dioco-group/jenny-tts-dataset). " +
-        "The British female and male voices are trained on the Crowdsourced high-quality UK and Ireland English dataset, CC BY-SA 4.0 (openslr.org/83). " +
-        "Voices are made with Piper models (MIT) and run with sherpa-onnx (Apache-2.0) and eSpeak NG (GPL-3.0).";
+        "Voices: the British female voice is \"Cori\" by Bryce Beattie, trained on public domain LibriVox recordings (brycebeattie.com/files/tts). " +
+        "The British male and American female voices are Kokoro-82M by hexgrad (Apache-2.0, huggingface.co/hexgrad/Kokoro-82M). " +
+        "Voices run with sherpa-onnx (Apache-2.0) and eSpeak NG (GPL-3.0).";
 
     private static readonly Symbol[] All =
     [

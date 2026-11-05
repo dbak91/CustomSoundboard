@@ -15,5 +15,5 @@ public enum NeuralVoiceKind
 {
     BritishFemale,
     BritishMale,
-    IrishFemale,
+    AmericanFemale,
 }

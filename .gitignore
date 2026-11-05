@@ -8,3 +8,6 @@ obj/
 /artifacts/android-arm64
 artifacts/
 .local-archive/
+
+# Too big for GitHub (over 100 MB). Fetch with scripts/Get-Voices.ps1
+Resources/Voices/kokoro.onnx

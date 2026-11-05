@@ -38,9 +38,9 @@
     <MauiAsset Include="Resources\Packs\Full\*.webp" LogicalName="symbols/%(Filename)%(Extension)" />
   </ItemGroup>
 
-  <!-- The two British AI voices (Piper): Sonia (jenny_dioco) and a male voice (alan). Unpacked to app storage on first use as voices/<file>. -->
+  <!-- AI voices packaged offline: British female (Piper cori), and Kokoro for British male and American female. Unpacked to app storage on first use as voices/<file>. -->
   <ItemGroup>
-    <MauiAsset Include="Resources\Voices\*.onnx;Resources\Voices\*-tokens.txt;Resources\Voices\espeak-ng-data.zip" LogicalName="voices/%(Filename)%(Extension)" />
+    <MauiAsset Include="Resources\Voices\*.onnx;Resources\Voices\*-tokens.txt;Resources\Voices\*-voices.bin;Resources\Voices\espeak-ng-data.zip" LogicalName="voices/%(Filename)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup>
