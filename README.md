@@ -3,6 +3,22 @@
 A big-button sound board for an Android tablet. Each tile is a large picture on a
 colour, and tapping it plays a spoken word. Built with .NET MAUI.
 
+## Minimum specification to install
+
+**Recommended: Android 8 or later. Supports Android 5 or later. 64-bit devices only.**
+
+| | |
+|---|---|
+| **Android** | Set to 5.0 (API 21) in the project, but only tested on Android 16. A 64-bit device is needed, and 64-bit Android 5 devices are rare, so use Android 8 or later to be safe. |
+| **Processor** | 64-bit only (arm64-v8a or x86_64). 32-bit ARM devices will not install it. |
+| **Free storage** | About 530 MB: 318 MB to install, plus up to 212 MB once every voice has been used |
+| **Download** | 251.5 MB APK |
+| **Screen** | Landscape tablet recommended |
+| **Network** | Not needed. All voices run offline |
+
+Install: copy the APK to the tablet, open it, and allow "Install unknown apps" when asked.
+Voice generation runs on the device, so it is slow on very old or low-end devices.
+
 ## Tiles
 
 The default tiles use the speech clips in `Resources/Sounds` and the icons in
