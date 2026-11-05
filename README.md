@@ -29,7 +29,16 @@ The default tiles use the speech clips in `Resources/Sounds` and the icons in
 `Resources/Images`. Pages one to three are the built-in pages. Extra pages (4 to 6) can be
 added from the menu, and each tile on them can take its own picture and sound.
 
-To change the built-in tiles, edit `PageOneTiles`, `PageTwoTiles` and `PageThreeTiles` in
+### Customising within the app
+
+No code changes or rebuild are needed to personalise the board. A parent, carer or family
+member can customise tiles from inside the app: set a tile's text, choose its picture, and
+choose how its sound is made (a generated voice, or your own uploaded audio file in MP3, WAV
+or M4A format). Extra pages can also be added from the menu.
+
+### Customising in code
+
+To change the built-in tiles in the source, edit `PageOneTiles`, `PageTwoTiles` and `PageThreeTiles` in
 `MainPage.cs`. Each tile is a `new SoundTile(emoji, label, colour, soundFile, imageName)`
 entry, and its sound file goes in `Resources/Sounds`.
 
