@@ -1,7 +1,8 @@
 # Custom Soundboard
 
-A big-button sound board for an Android tablet. Each tile is a large picture on a
-colour, and tapping it plays a spoken word. Built with .NET MAUI.
+A communicator app for non-verbal autism, built as a big-button sound board for an Android
+tablet. Each tile is a large picture on a colour, and tapping it plays a spoken word. It is
+fully configurable: use your own images and audio files for any tile. Built with .NET MAUI.
 
 ## Minimum specification to install
 
