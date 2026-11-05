@@ -20,7 +20,6 @@ public sealed record SpeechResult(string Text, string Path);
 public class SpeechEditorPage : ContentPage
 {
     private const string SelectedColor = "#1565C0";
-    private const string UnselectedColor = "#EEEEEE";
 
     private readonly TaskCompletionSource<SpeechResult?> _result = new();
     private readonly ISoundPlayer _player;
@@ -30,7 +29,6 @@ public class SpeechEditorPage : ContentPage
     private readonly Label _status;
     private readonly Button _hearButton;
     private readonly Button _useButton;
-    private readonly Dictionary<SpeechVoice, Button> _voiceButtons = [];
     private SpeechVoice _voice;
 
     // The last sound made, and the words and voice it was made from. It is remade only when either changes.
@@ -78,19 +76,29 @@ public class SpeechEditorPage : ContentPage
 
         var layout = new VerticalStackLayout { Spacing = 16, Padding = new Thickness(24), Children = { heading } };
 
-        // With only one voice there is nothing to pick between.
+        // With only one voice there is nothing to pick between. The dropdown lists voices in the order given:
+        // the human-sounding ones first, then the robot ones.
         if (voices.Count > 1)
         {
-            var voiceRow = new HorizontalStackLayout { Spacing = 8 };
-            foreach (var voice in voices)
+            var picker = new Picker
             {
-                var button = CreateButton(voice.Name, UnselectedColor, Colors.Black, () => SelectVoice(voice));
-                _voiceButtons[voice] = button;
-                voiceRow.Add(button);
-            }
+                Title = "Choose a voice",
+                FontSize = 22,
+                TextColor = Colors.Black,
+                TitleColor = Color.FromArgb("#37474F"),
+                ItemsSource = voices.Select(voice => voice.Name).ToList(),
+                SelectedIndex = 0,
+            };
+            picker.SelectedIndexChanged += (_, _) =>
+            {
+                if (picker.SelectedIndex >= 0)
+                {
+                    _voice = voices[picker.SelectedIndex];
+                }
+            };
 
-            layout.Add(new ScrollView { Orientation = ScrollOrientation.Horizontal, Content = voiceRow });
-            SelectVoice(_voice);
+            layout.Add(new Label { Text = "Voice", FontSize = 18, TextColor = Color.FromArgb("#37474F") });
+            layout.Add(picker);
         }
 
         layout.Add(_words);
@@ -139,17 +147,6 @@ public class SpeechEditorPage : ContentPage
         var button = CreateButton(text, color, textColor, () => { });
         button.Clicked += async (_, _) => await action();
         return button;
-    }
-
-    private void SelectVoice(SpeechVoice voice)
-    {
-        _voice = voice;
-        foreach (var (buttonVoice, button) in _voiceButtons)
-        {
-            var selected = buttonVoice == voice;
-            button.BackgroundColor = Color.FromArgb(selected ? SelectedColor : UnselectedColor);
-            button.TextColor = selected ? Colors.White : Colors.Black;
-        }
     }
 
     private async Task HearAsync()

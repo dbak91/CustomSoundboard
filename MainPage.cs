@@ -35,13 +35,22 @@ public class MainPage : ContentPage
     private const string RecordAudioChoice = "Record audio";
 
     // Text to audio: the device's own robot voice, offered alongside the AI voices packaged in the app.
-    private const string RobotVoiceName = "Robot";
+    private const string RobotVoiceName = "Robot - this device";
 
     private static readonly (string Name, string Kind, NeuralVoiceKind Voice)[] AiVoices =
     [
         ("English (British) female", "britishfemale", NeuralVoiceKind.BritishFemale),
         ("English (British) male", "britishmale", NeuralVoiceKind.BritishMale),
-        ("English (Irish) female", "irishfemale", NeuralVoiceKind.IrishFemale),
+        ("English (American) female", "americanfemale", NeuralVoiceKind.AmericanFemale),
+    ];
+
+    // Tiny robot voices: the British female voice run through a robot effect. No extra model files.
+    private static readonly (string Name, string Kind, RoboticStyle Style)[] RoboticVoices =
+    [
+        ("Robot - classic hum", "robotclassic", RoboticStyle.Classic),
+        ("Robot - Dalek", "robotdalek", RoboticStyle.Dalek),
+        ("Robot - retro 8-bit", "robotretro", RoboticStyle.Retro),
+        ("Robot - tin can", "robotmetallic", RoboticStyle.Metallic),
     ];
 
     // Edit image.
@@ -955,15 +964,26 @@ public class MainPage : ContentPage
     private async Task<bool> TextToAudioAsync(int page, int index)
     {
         var voices = new List<SpeechVoice>();
-        if (await _speech.IsAvailableAsync())
-        {
-            voices.Add(new SpeechVoice(RobotVoiceName, "speech", (text, path) => _speech.SynthesizeAsync(text, path)));
-        }
-        // The AI voices packaged in the app speak the words into a WAV file,
+        // The human-sounding AI voices packaged in the app come first. They speak the words into a WAV file,
         // so the finished tile plays with no network connection.
         foreach (var (name, kind, voice) in AiVoices)
         {
             voices.Add(new SpeechVoice(name, kind, (text, path) => _neuralVoice.SynthesizeAsync(voice, text, path)));
+        }
+
+        // Then the small robot voices.
+        foreach (var (name, kind, style) in RoboticVoices)
+        {
+            voices.Add(new SpeechVoice(name, kind, async (text, path) =>
+            {
+                await _neuralVoice.SynthesizeAsync(NeuralVoiceKind.BritishFemale, text, path);
+                await Task.Run(() => RoboticVoice.Apply(path, style));
+            }));
+        }
+
+        if (await _speech.IsAvailableAsync())
+        {
+            voices.Add(new SpeechVoice(RobotVoiceName, "speech", (text, path) => _speech.SynthesizeAsync(text, path)));
         }
         if (voices.Count == 0)
         {
