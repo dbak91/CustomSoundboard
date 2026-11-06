@@ -7,10 +7,10 @@ fully configurable: use your own images and audio files for any tile. Built with
 <img width="2400" height="1080" alt="Screenshot_20261105-085008" src="https://github.com/user-attachments/assets/f2fd6532-0308-405d-adab-3dde6abf0a96" />
 
 
-> **Older device?** There is an alternative **Lite** edition (JAMESSOUNDS) for older Android
+> **Older device?** There is an alternative **Lite** edition (CustomSoundboardLite) for older Android
 > tablets. It is smaller and simpler, and uses the device's own text-to-speech voice (English,
 > British) instead of the on-device AI voices, with a smaller symbol set (500 pictures and
-> 500 emoji). Use Lite if the Full edition will not install or runs too slowly.
+> 500 emoji). Use Lite if the Full edition will not install And your device is 32 bit.
 
 ## Minimum specification to install
 
